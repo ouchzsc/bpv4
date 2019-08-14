@@ -63,6 +63,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Game\Scripts\Boot.cs" />
+    <Compile Include="Assets\Res\AssetInfoScriptableObject.cs" />
+    <Compile Include="Assets\Res\ConsoleBoard.cs" />
+    <Compile Include="Assets\Res\Lib\Stream.cs" />
+    <Compile Include="Assets\Res\Lib\StreamMap.cs" />
+    <Compile Include="Assets\Res\Res\AbMgr.cs" />
+    <Compile Include="Assets\Res\Res\AssetLoader.cs" />
+    <Compile Include="Assets\Res\Res\BundleLoader.cs" />
+    <Compile Include="Assets\Res\Res\User.cs" />
     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />

@@ -8,7 +8,7 @@ public class Tools
     /// <summary>
     /// 遍历文件夹下所有文件，导出animation、mat、texture
     /// </summary>
-    [MenuItem("Assets/P4/Export Raw Content")]
+    [MenuItem("Assets/Export Raw Content")]
     static void ExportRaw()
     {
         string[] strs = Selection.assetGUIDs;

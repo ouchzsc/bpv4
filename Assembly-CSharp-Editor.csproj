@@ -62,7 +62,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Game\Scripts\Editor\ExportRawContent.cs" />
+    <Compile Include="Assets\Game\Scripts\Editor\GenResCsv.cs" />
     <Compile Include="Assets\Game\Scripts\Editor\LuaZip.cs" />
+    <Compile Include="Assets\Res\Editor\AssetInfoGenerator.cs" />
     <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
     <Compile Include="Assets\XLua\Examples\13_BuildFromCLI\Editor\BuildFromCLI.cs" />
     <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />

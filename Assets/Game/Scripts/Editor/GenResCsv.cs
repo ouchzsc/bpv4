@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class GenResCsv : EditorWindow
 {
-    [MenuItem("Window/P4/GenResCsv")]
+    [MenuItem("Assets/GenResCsv")]
     public static void Gen()
     {
         string[] allbundles = AssetDatabase.GetAllAssetBundleNames();
