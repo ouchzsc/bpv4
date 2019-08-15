@@ -1,8 +1,8 @@
 local ComPrefab = require("common.ComPrefab")
 local Npc = ComPrefab:extends()
 local module = require("module.module")
-local BehvTransform = require("World.BehvTransform")
-local BehvAnimator = require("World.BehvAnimator")
+local BehvTransform = require("world.BehvTransform")
+local BehvAnimator = require("world.BehvAnimator")
 
 function Npc:onNew()
     ComPrefab.onNew(self)

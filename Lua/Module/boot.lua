@@ -1,6 +1,6 @@
 local GameObject = CS.UnityEngine.GameObject
 local module = require("module.module")
-local ComOpenWorld = require("World.ComOpenWorld")
+local ComOpenWorld = require("world.ComOpenWorld")
 local boot = {}
 
 boot.worldRoot =nil

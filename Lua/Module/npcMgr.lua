@@ -1,5 +1,5 @@
 local module = require("module.module")
-local Npc = require("World.Npc")
+local Npc = require("world.Npc")
 local npcMgr = {}
 
 -- key:guid value:Npc

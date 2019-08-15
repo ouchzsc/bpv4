@@ -3,8 +3,8 @@ local ComOpenWorld = ComSimpScene:extends()
 local module = require("module.module")
 local GameObject = CS.UnityEngine.GameObject
 local ComGo = require("common.ComGo")
-local ComChunk = require("World.ComChunk")
-local ComFreeLook = require("World.ComFreeLook")
+local ComChunk = require("world.ComChunk")
+local ComFreeLook = require("world.ComFreeLook")
 local Vector3 = CS.UnityEngine.Vector3
 
 local GridW = 512

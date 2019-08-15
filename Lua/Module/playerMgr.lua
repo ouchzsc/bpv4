@@ -1,5 +1,5 @@
 local module = require("module.module")
-local Player = require("World.Player")
+local Player = require("world.Player")
 local Vector3 = CS.UnityEngine.Vector3
 
 local playerMgr = {}
