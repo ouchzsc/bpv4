@@ -12,27 +12,15 @@ namespace Res
     
     public class AbMgr : MonoBehaviour
     {
+        [HideInInspector]
         public AssetBundleManifest manifest;
-        public List<AssetInfo> assetInfos;
-        public Dictionary<string, AssetInfo> assetInfoMap;
         public static AbMgr instance;
+        public bool loadInEditor = false;
 
         private void Awake()
         {
             instance = this;
-            //LoadAssetInfo();
             LoadManifest(Path.Combine(Application.streamingAssetsPath, "StandaloneWindows"));
-        }
-
-        private void LoadAssetInfo()    
-        {
-            AssetInfoScriptableObject aiSo = Resources.Load("assetInfos") as AssetInfoScriptableObject;
-            assetInfos = aiSo.assetInfos;
-            assetInfoMap = new Dictionary<string, AssetInfo>();
-            foreach (var assetInfo in assetInfos)
-            {
-                assetInfoMap.Add(assetInfo.assetName, assetInfo);
-            }
         }
 
         private void LoadManifest(string manifestPath)

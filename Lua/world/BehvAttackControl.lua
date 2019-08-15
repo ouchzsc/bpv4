@@ -1,4 +1,4 @@
-local ComBehavior = require("common.ComBehavior")
+local ComBehavior = require("common.Component")
 local module = require("module.module")
 local BehvAttackControl = ComBehavior:extends()
 

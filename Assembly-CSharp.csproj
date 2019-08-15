@@ -65,7 +65,6 @@
     <Compile Include="Assets\Game\Scripts\Boot.cs" />
     <Compile Include="Assets\Game\Scripts\DontDestroy.cs" />
     <Compile Include="Assets\Res\AssetInfoScriptableObject.cs" />
-    <Compile Include="Assets\Res\ConsoleBoard.cs" />
     <Compile Include="Assets\Res\Lib\Stream.cs" />
     <Compile Include="Assets\Res\Lib\StreamMap.cs" />
     <Compile Include="Assets\Res\Res\AbMgr.cs" />

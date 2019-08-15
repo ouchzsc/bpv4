@@ -15,7 +15,6 @@ function module.init()
     -----------------
     --module.cfgMgr = require("Config.cfgMgr")
     --module.cfgMgr.init()
-    --
     --module.scene = require("module.scene")
     --module.boot = require("module.boot")
     --module.playerMgr = require("module.playerMgr")

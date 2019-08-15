@@ -1,4 +1,4 @@
-local ComBehavior = require("common.ComBehavior")
+local ComBehavior = require("common.Component")
 local module = require("module.module")
 local Vector3 = CS.UnityEngine.Vector3
 local BehvTransform = ComBehavior:extends()

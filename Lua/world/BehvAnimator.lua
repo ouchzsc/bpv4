@@ -1,4 +1,4 @@
-local ComBehavior = require("common.ComBehavior")
+local ComBehavior = require("common.Component")
 local BehvAnimator = ComBehavior:extends()
 local module = require("module.module")
 local AssetManager = CS.Oasis.Unity.AssetManager

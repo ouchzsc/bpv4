@@ -1,31 +1,28 @@
-local ComBase = require("common.ComBase")
-local module = require("module.module")
-local ComBehavior = ComBase:extends()
+local Entity = require("common.Entity")
+local EntityGo = Entity:extends()
 
-function ComBehavior:addChild()
-    module.logger.error("behavior can not add child com")
-end
-
-function ComBehavior:onNew()
+function EntityGo:onNew()
     self:onAwake()
 end
 
-function ComBehavior:show()
+function EntityGo:show()
     if not self.isEnable then
         self.isEnable = true
+        self.gameObject:SetActive(true)
         self:onEnable()
     end
     self:onShow()
 end
 
-function ComBehavior:hide()
+function EntityGo:hide()
     if self.isEnable then
         self.isEnable = false
         self:hideChildren()
         self:onDisable()
         self:unRegAllEvent()
         self:unScheduleAllTimer()
+        self.gameObject:SetActive(false)
     end
 end
 
-return ComBehavior
+return EntityGo

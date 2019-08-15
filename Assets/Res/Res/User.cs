@@ -1,5 +1,8 @@
 using System.Collections.Generic;
-
+using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 namespace Res
 {
     public class User
@@ -18,6 +21,14 @@ namespace Res
 
         public void Load(LoadDoneDelegate loadDone)
         {
+#if UNITY_EDITOR
+            if (AbMgr.instance.loadInEditor)
+            {
+                object obj = AssetDatabase.LoadAssetAtPath<Object>(_assetInfo.assetPath);
+                loadDone(obj);
+                return;
+            }
+#endif
             if (AssetLoaderPool.TryGetValue(_assetInfo, out var assetLoader))
             {
                 if (assetLoader.Asset != null)
@@ -49,5 +60,12 @@ namespace Res
             if (_loadDone != null)
                 _loadDone(asset);
         }
+
+#if Unity_Editor
+        public void LoadInEditor(LoadDoneDelegate loadDone)
+        {            
+            AssetDataBase.
+        }
+#endif
     }
 }

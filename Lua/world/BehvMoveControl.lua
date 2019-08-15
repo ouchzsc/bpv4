@@ -1,4 +1,4 @@
-local ComBehavior = require("common.ComBehavior")
+local ComBehavior = require("common.Component")
 local BehvMoveControl = ComBehavior:extends()
 local InputManager = CS.Game.InputManager
 local module = require("module.module")
