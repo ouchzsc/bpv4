@@ -1,8 +1,8 @@
-local ComRes = require("Common.ComRes")
+local ComRes = require("common.ComRes")
 local AssetLoadFlag = CS.Oasis.Unity.AssetLoadFlag
 local AssetManager = CS.Oasis.Unity.AssetManager
 local SceneManager = CS.UnityEngine.SceneManagement.SceneManager
-local module = require("Module.module")
+local module = require("module.module")
 local GameObject = CS.UnityEngine.GameObject
 local ComSimpScene = ComRes:extends()
 

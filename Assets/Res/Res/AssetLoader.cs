@@ -102,7 +102,7 @@ namespace Res
             else
             {
                 Debug.LogError($"load asset {assetName} failed");
-                
+
                 loadDone(null);
             }
         }

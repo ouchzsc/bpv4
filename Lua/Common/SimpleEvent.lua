@@ -1,4 +1,4 @@
-local Stream = require("Common.Stream")
+local Stream = require("common.Stream")
 local SimpleEvent = {}
 
 local all = {}

@@ -1,4 +1,4 @@
-local StreamMap = require("Common.StreamMap")
+local StreamMap = require("common.StreamMap")
 local Timer = {}
 
 function Timer:New()

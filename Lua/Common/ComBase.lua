@@ -1,6 +1,6 @@
-local Object = require("Common.Object")
-local Stream = require("Common.Stream")
-local module = require("Module.module")
+local Object = require("common.Object")
+local Stream = require("common.Stream")
+local module = require("module.module")
 local ComBase = Object:extends()
 
 function ComBase:onAwake()

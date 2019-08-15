@@ -6,7 +6,7 @@ using System.IO;
 
 public class LuaZip
 {
-    [MenuItem("Lua/Copy")]
+    [MenuItem("Asset/CopyLua")]
     public static void ZipLua()
     {
         string sourcePath = Directory.GetCurrentDirectory() + "/Lua/";

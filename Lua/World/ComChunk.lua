@@ -1,5 +1,5 @@
-local ComWorldChunkBase = require("Common.ComWorldChunkBase")
-local module = require("Module.module")
+local ComWorldChunkBase = require("common.ComWorldChunkBase")
+local module = require("module.module")
 local ComChunk = ComWorldChunkBase:extends()
 
 function ComChunk:onEnable()

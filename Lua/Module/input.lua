@@ -1,7 +1,7 @@
-local module = require("Module.module")
+local module = require("module.module")
 local Input = CS.UnityEngine.Input
 local KeyCode = CS.UnityEngine.KeyCode
-local testFile = 'Test'
+local testFile = 'test.test'
 
 local input = {}
 

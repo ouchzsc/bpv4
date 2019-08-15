@@ -1,5 +1,5 @@
-local ComGo = require("Common.ComGo")
-local module = require("Module.module")
+local ComGo = require("common.ComGo")
+local module = require("module.module")
 local GameObject = CS.UnityEngine.GameObject
 
 local Input = CS.UnityEngine.Input

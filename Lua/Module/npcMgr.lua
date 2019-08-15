@@ -1,4 +1,4 @@
-local module = require("Module.module")
+local module = require("module.module")
 local Npc = require("World.Npc")
 local npcMgr = {}
 

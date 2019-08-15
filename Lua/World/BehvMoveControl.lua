@@ -1,7 +1,7 @@
-local ComBehavior = require("Common.ComBehavior")
+local ComBehavior = require("common.ComBehavior")
 local BehvMoveControl = ComBehavior:extends()
 local InputManager = CS.Game.InputManager
-local module = require("Module.module")
+local module = require("module.module")
 local Input = CS.UnityEngine.Input
 
 function BehvMoveControl:onAwake()

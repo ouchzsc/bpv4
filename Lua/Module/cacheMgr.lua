@@ -1,4 +1,4 @@
-local Cache = require("Common.Cache")
+local Cache = require("common.Cache")
 local cacheMgr = {}
 
 function cacheMgr.init()

@@ -74,12 +74,6 @@
         <column desc="程序用名字" name="RankName" type="string"/>
         <column desc="显示名称" name="RankShowName" type="string"/>
     </table>
-    <table name="loot" primaryKey="lootid">
-        <column desc="序号" name="lootid" ref="lootitem,lootid" refType="LIST" type="int"/>
-        <column name="ename" type="string"/>
-        <column desc="名字" name="name" type="string"/>
-        <column desc="掉落0件物品的概率" name="chanceList" type="list,int,7"/>
-    </table>
     <table name="lootitem" primaryKey="lootid,itemid">
         <column desc="掉落id" name="lootid" type="int"/>
         <column desc="掉落物品" name="itemid" type="int"/>
@@ -90,6 +84,12 @@
     <table name="monster" primaryKey="id">
         <column desc="id" name="id" type="int"/>
         <column compress=":" name="posList" type="list,Position"/>
+    </table>
+    <table name="rw.loot" primaryKey="lootid">
+        <column desc="序号" name="lootid" type="int"/>
+        <column name="ename" type="string"/>
+        <column desc="名字" name="name" type="string"/>
+        <column desc="掉落0件物品的概率" name="chanceList" type="list,int,7"/>
     </table>
     <table name="signin" primaryKey="id">
         <column desc="礼包ID" name="id" type="int"/>

@@ -1,5 +1,5 @@
 local GameObject = CS.UnityEngine.GameObject
-local module = require("Module.module")
+local module = require("module.module")
 local ComOpenWorld = require("World.ComOpenWorld")
 local boot = {}
 

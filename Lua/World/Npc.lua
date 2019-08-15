@@ -1,6 +1,6 @@
-local ComPrefab = require("Common.ComPrefab")
+local ComPrefab = require("common.ComPrefab")
 local Npc = ComPrefab:extends()
-local module = require("Module.module")
+local module = require("module.module")
 local BehvTransform = require("World.BehvTransform")
 local BehvAnimator = require("World.BehvAnimator")
 

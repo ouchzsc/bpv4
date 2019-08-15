@@ -1,5 +1,5 @@
-local Stream = require("Common.Stream")
-local module = require("Module.module")
+local Stream = require("common.Stream")
+local module = require("module.module")
 local PlayableGraph = CS.UnityEngine.Playables.PlayableGraph
 local DirectorUpdateMode = CS.UnityEngine.Playables.DirectorUpdateMode
 local AnimationPlayableOutput = CS.UnityEngine.Animations.AnimationPlayableOutput
@@ -8,7 +8,7 @@ local AnimatorControllerPlayable = CS.UnityEngine.Animations.AnimatorControllerP
 local AnimationMixerPlayable = CS.UnityEngine.Animations.AnimationMixerPlayable
 local CSharpWrap = CS.Game.CSharpWrap
 
-local Object = require("Common.Object")
+local Object = require("common.Object")
 local media = Object:extends()
 local playableMgr = {}
 

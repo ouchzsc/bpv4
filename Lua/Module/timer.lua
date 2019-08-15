@@ -1,4 +1,4 @@
-local Timer= require("Common.Timer")
+local Timer= require("common.Timer")
 local timer = {}
 
 function timer.init()

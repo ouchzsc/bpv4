@@ -36,7 +36,7 @@ public class ConsoleBoard : MonoBehaviour
 
     public void StartLoad()
     {
-        var loader = abMgr.Create(assetInfo);
+        var loader = abMgr.CreateBy(assetInfo);
         loader.Load((asset) =>
         {
             GameObject prefab = asset as GameObject;

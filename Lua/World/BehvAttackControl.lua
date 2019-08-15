@@ -1,5 +1,5 @@
-local ComBehavior = require("Common.ComBehavior")
-local module = require("Module.module")
+local ComBehavior = require("common.ComBehavior")
+local module = require("module.module")
 local BehvAttackControl = ComBehavior:extends()
 
 function BehvAttackControl:onAwake()

@@ -20,7 +20,7 @@ namespace Res
         private void Awake()
         {
             instance = this;
-            LoadAssetInfo();
+            //LoadAssetInfo();
             LoadManifest(Path.Combine(Application.streamingAssetsPath, "StandaloneWindows"));
         }
 
@@ -41,8 +41,14 @@ namespace Res
             manifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
         }
 
-        public User Create(AssetInfo assetInfo)
+        public User CreateBy(AssetInfo assetInfo)
         {
+            return new User(assetInfo);
+        }
+
+        public User Create(string assetPath, string bundleName, string assetName, string type)
+        {
+            AssetInfo assetInfo = new AssetInfo(assetPath, bundleName, assetName, type);
             return new User(assetInfo);
         }
     }

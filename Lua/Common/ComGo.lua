@@ -1,4 +1,4 @@
-local ComBase = require("Common.ComBase")
+local ComBase = require("common.ComBase")
 local ComGo = ComBase:extends()
 
 function ComGo:onNew()

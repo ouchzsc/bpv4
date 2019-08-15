@@ -1,5 +1,5 @@
 local SimpleClass = require("Core.SimpleClass")
-local module = require("Module.module")
+local module = require("module.module")
 local Time = CS.UnityEngine.Time
 local worldEvent = SimpleClass()
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using XLua;
 using UnityEngine;
+using Res;
 
 public class Boot : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class Boot : MonoBehaviour
         LuaFunction startFunc = mainLuaTable.GetInPath<LuaFunction>("start") as LuaFunction;
         updateFunc = mainLuaTable.GetInPath<LuaFunction>("update") as LuaFunction;
         startFunc.Call();
+
     }
 
 
@@ -32,6 +34,7 @@ public class Boot : MonoBehaviour
         if (useLuaZip)
         {
             string filePath = Path.Combine(Application.streamingAssetsPath, "Lua", fileName);
+            filePath = filePath.Replace(".", "/") + ".lua";
             return File.ReadAllBytes(filePath);
         }
         else

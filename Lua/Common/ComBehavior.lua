@@ -1,5 +1,5 @@
-local ComBase = require("Common.ComBase")
-local module = require("Module.module")
+local ComBase = require("common.ComBase")
+local module = require("module.module")
 local ComBehavior = ComBase:extends()
 
 function ComBehavior:addChild()

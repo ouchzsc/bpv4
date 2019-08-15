@@ -1,8 +1,8 @@
-local ComPrefab = require("Common.ComPrefab")
+local ComPrefab = require("common.ComPrefab")
 local Player = ComPrefab:extends()
 local BehvAttackControl = require("World.BehvAttackControl")
 local BehvMoveControl = require("World.BehvMoveControl")
-local module = require("Module.module")
+local module = require("module.module")
 local Vector3 = CS.UnityEngine.Vector3
 local BehvTransform = require("World.BehvTransform")
 

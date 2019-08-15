@@ -26,17 +26,14 @@ public class GenResCsv : EditorWindow
             }
         }
 
-
-        DirectoryInfo trunkPath = Directory.GetParent(System.Environment.CurrentDirectory);
-        string fileName = Path.Combine(trunkPath.FullName, "data", "csv", "assets.csv");
+        string fileName = Path.Combine(System.Environment.CurrentDirectory, "config","asset", "assets.csv");
         using (var stream = File.OpenWrite(fileName))
         {
             StreamWriter sw = new StreamWriter(stream, Encoding.GetEncoding(936));
             stream.Seek(0, SeekOrigin.Begin);
             stream.SetLength(0);
-            sw.WriteLine("id,bundle,asset,type");
-            sw.WriteLine("string,string,string,string");
-            sw.WriteLine("主键,bundle名字,资产命名,资产类型");
+            sw.WriteLine("assetpath,bundle,asset,type");            
+            sw.WriteLine("assetpath,bundle,asset,type");
             foreach (var line in lines)
             {
                 sw.WriteLine(line);

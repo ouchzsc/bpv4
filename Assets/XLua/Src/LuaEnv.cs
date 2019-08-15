@@ -108,7 +108,7 @@ namespace XLua
                 AddSearcher(StaticLuaCallbacks.LoadFromResource, 4);
                 AddSearcher(StaticLuaCallbacks.LoadFromStreamingAssetsPath, -1);
 #endif
-                DoString(init_xlua, "Init");
+                DoString(init_xlua, "Init");                
                 init_xlua = null;
 
 #if !UNITY_SWITCH || UNITY_EDITOR
