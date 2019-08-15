@@ -1,0 +1,56 @@
+ManifestFileVersion: 0
+CRC: 2090928340
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3c892de2c0a01844040ae5d26ef6af1b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 98909e57130108d3f5d673cbf5be317f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Game/Art/Assassin/Materials/Vampire_MAT.mat
+- Assets/Game/Art/Assassin/Textures/Vampire_normal.png
+- Assets/Game/Art/Assassin/Prefab/vampire_a_lusth.prefab
+- Assets/Game/Art/Assassin/Animations/standing run forward stop.anim
+- Assets/Game/Art/Assassin/Animations/standing walk left.anim
+- Assets/Game/Art/Assassin/Animations/standing turn 90 left.anim
+- Assets/Game/Art/Assassin/Animations/standing run left.anim
+- Assets/Game/Art/Assassin/Textures/Vampire_specular.png
+- Assets/Game/Art/Assassin/Animations/standing walk back.anim
+- Assets/Game/Art/Assassin/Animations/standing idle 01.anim
+- Assets/Game/Art/Assassin/Model/Vampire.mesh
+- Assets/Game/Art/Assassin/Animations/standing walk right.anim
+- Assets/Game/Art/Assassin/Animations/standing walk forward.anim
+- Assets/Game/Art/Assassin/Animations/standing run forward.anim
+- Assets/Game/Art/Assassin/Textures/Vampire_emission.png
+- Assets/Game/Art/Assassin/Animator/as_animator.controller
+- Assets/Game/Art/Assassin/Animations/standing run back.anim
+- Assets/Game/Art/Assassin/Animations/standing run right.anim
+- Assets/Game/Art/Assassin/Model/vampire_a_lusthAvatar.asset
+- Assets/Game/Art/Assassin/Animations/standing turn 90 right.anim
+- Assets/Game/Art/Assassin/Textures/Vampire_diffuse.png
+Dependencies: []
