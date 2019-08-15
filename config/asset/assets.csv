@@ -1,0 +1,24 @@
+assetpath,bundle,asset,type
+assetpath,bundle,asset,type
+Assets/Game/Art/Assassin/Animations/standing idle 01.anim,assassin,standing idle 01,.anim
+Assets/Game/Art/Assassin/Animations/standing run back.anim,assassin,standing run back,.anim
+Assets/Game/Art/Assassin/Animations/standing run forward stop.anim,assassin,standing run forward stop,.anim
+Assets/Game/Art/Assassin/Animations/standing run forward.anim,assassin,standing run forward,.anim
+Assets/Game/Art/Assassin/Animations/standing run left.anim,assassin,standing run left,.anim
+Assets/Game/Art/Assassin/Animations/standing run right.anim,assassin,standing run right,.anim
+Assets/Game/Art/Assassin/Animations/standing turn 90 left.anim,assassin,standing turn 90 left,.anim
+Assets/Game/Art/Assassin/Animations/standing turn 90 right.anim,assassin,standing turn 90 right,.anim
+Assets/Game/Art/Assassin/Animations/standing walk back.anim,assassin,standing walk back,.anim
+Assets/Game/Art/Assassin/Animations/standing walk forward.anim,assassin,standing walk forward,.anim
+Assets/Game/Art/Assassin/Animations/standing walk left.anim,assassin,standing walk left,.anim
+Assets/Game/Art/Assassin/Animations/standing walk right.anim,assassin,standing walk right,.anim
+Assets/Game/Art/Assassin/Animations/vampire_a_lusth.anim,assassin,vampire_a_lusth,.anim
+Assets/Game/Art/Assassin/Animator/as_animator.controller,assassin,as_animator,.controller
+Assets/Game/Art/Assassin/Materials/Vampire_MAT.mat,assassin,Vampire_MAT,.mat
+Assets/Game/Art/Assassin/Model/Vampire.mesh,assassin,Vampire,.mesh
+Assets/Game/Art/Assassin/Model/vampire_a_lusthAvatar.asset,assassin,vampire_a_lusthAvatar,.asset
+Assets/Game/Art/Assassin/Prefab/vampire_a_lusth.prefab,assassin,vampire_a_lusth,.prefab
+Assets/Game/Art/Assassin/Textures/Vampire_diffuse.png,assassin,Vampire_diffuse,.png
+Assets/Game/Art/Assassin/Textures/Vampire_emission.png,assassin,Vampire_emission,.png
+Assets/Game/Art/Assassin/Textures/Vampire_normal.png,assassin,Vampire_normal,.png
+Assets/Game/Art/Assassin/Textures/Vampire_specular.png,assassin,Vampire_specular,.png

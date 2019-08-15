@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<db>
+    <table name="asset.assets" own="client" primaryKey="assetpath">
+        <column desc="assetpath" name="assetpath" type="string"/>
+        <column desc="bundle" name="bundle" type="string"/>
+        <column desc="asset" name="asset" type="string"/>
+        <column desc="type" name="type" type="string"/>
+    </table>
+    <table name="npc.npc" own="client" primaryKey="id">
+        <column desc="#id" name="id" type="int"/>
+        <column desc="asset" name="asset" ref="asset.assets" type="string"/>
+    </table>
+</db>
