@@ -1,6 +1,8 @@
 -- 接收Axis命令来控制速度和加速度
 -- entity 中读cmdX cmdY
 -- entity 写 v axMap ayMap
+local Component = require("common.Component")
+local module = require("module.module")
 
 local PhysicsMove = Component:extends()
 local ax, ay = 300, 10000
@@ -12,9 +14,9 @@ local defaultFriction = 10
 local jumpXSpeed = 100
 
 function PhysicsMove:onEnable()
-    self:reg(event.onPhysicsUpdate, function(dt)
+    self:reg(module.event.onFixedUpdate, function(dt)
         local entity = self.entity
-        local _, _, cols, len = world:check(entity, entity.x, entity.y + checkY, layerMask.filter)
+        local _, _, cols, len =module.world.bumpWorld:check(entity, entity.x, entity.y + checkY, module.layerMask.filter)
         entity.isGrounded = false
         local groundCol = nil
         for i = 1, len do

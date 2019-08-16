@@ -1,15 +1,17 @@
+local Component = require("common.Component")
+local module = require("module.module")
 local Gravity = Component:extends()
 
 function Gravity:onEnable()
-    self:reg(event.onPhysicsUpdate, function(dt)
-        self:onPhysicsUpdate(dt)
+    self:reg(module.event.onFixedUpdate, function(dt)
+        self:onFixedUpdate(dt)
     end)
 end
 
-function Gravity:onPhysicsUpdate(dt)
+function Gravity:onFixedUpdate(dt)
     local entity = self.entity
     entity.ayMap = entity.ayMap or {}
-    entity.ayMap.gravityY = gVariables.gravity
+    entity.ayMap.gravityY = -5
 end
 
 function Gravity:onDisable()

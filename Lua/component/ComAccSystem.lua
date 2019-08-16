@@ -1,8 +1,10 @@
+local Component = require("common.Component")
+local module = require("module.module")
 local AccSystem = Component:extends()
 local defaultMaxVx, defaultMaxVy, defaultMinVy = 300, 450, -300
 
 function AccSystem:onEnable()
-    self:reg(event.onLateUpdate, function(dt)
+    self:reg(module.event.onLateUpdate, function(_, dt)
         self:onAccSystemUpdate(dt)
     end)
 end

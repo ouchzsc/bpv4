@@ -719,7 +719,6 @@ function World:check(item, goalX, goalY, filter)
     return goalX, goalY, cols, len
 end
 
-
 -- Public library functions
 
 bump.newWorld = function(cellSize)

@@ -16,15 +16,15 @@ function GameObject:onEnable()
         entity.layerMask = layerMask.trigger
     end
     world:add(entity, entity.x, entity.y, entity.w, entity.h)
-    self:reg(event.onPhysicsUpdate, function(dt)
-        self:onPhysicsUpdate(dt)
+    self:reg(event.onFixedUpdate, function(dt)
+        self:onFixedUpdate(dt)
     end)
     self:reg(event.onLateUpdate, function(dt)
         self:onLateUpdate(dt)
     end)
 end
 
-function GameObject:onPhysicsUpdate(dt)
+function GameObject:onFixedUpdate(dt)
     if not self.createSuccess then
         local filter = function(other)
             return layerMask.collideWith(self.oldLayerMask, other.layerMask)

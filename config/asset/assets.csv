@@ -1,5 +1,6 @@
 assetpath,bundle,asset,type
 assetpath,bundle,asset,type
+Assets/Game/Art/Assassin/Animations/idle.anim,assassin,idle,.anim
 Assets/Game/Art/Assassin/Animations/standing idle 01.anim,assassin,standing idle 01,.anim
 Assets/Game/Art/Assassin/Animations/standing run back.anim,assassin,standing run back,.anim
 Assets/Game/Art/Assassin/Animations/standing run forward stop.anim,assassin,standing run forward stop,.anim
@@ -12,7 +13,6 @@ Assets/Game/Art/Assassin/Animations/standing walk back.anim,assassin,standing wa
 Assets/Game/Art/Assassin/Animations/standing walk forward.anim,assassin,standing walk forward,.anim
 Assets/Game/Art/Assassin/Animations/standing walk left.anim,assassin,standing walk left,.anim
 Assets/Game/Art/Assassin/Animations/standing walk right.anim,assassin,standing walk right,.anim
-Assets/Game/Art/Assassin/Animations/vampire_a_lusth.anim,assassin,vampire_a_lusth,.anim
 Assets/Game/Art/Assassin/Animator/as_animator.controller,assassin,as_animator,.controller
 Assets/Game/Art/Assassin/Materials/Vampire_MAT.mat,assassin,Vampire_MAT,.mat
 Assets/Game/Art/Assassin/Model/Vampire.mesh,assassin,Vampire,.mesh
@@ -22,3 +22,19 @@ Assets/Game/Art/Assassin/Textures/Vampire_diffuse.png,assassin,Vampire_diffuse,.
 Assets/Game/Art/Assassin/Textures/Vampire_emission.png,assassin,Vampire_emission,.png
 Assets/Game/Art/Assassin/Textures/Vampire_normal.png,assassin,Vampire_normal,.png
 Assets/Game/Art/Assassin/Textures/Vampire_specular.png,assassin,Vampire_specular,.png
+Assets/Game/Art/Brick/Materials/Pixel Cube Atlas.mat,brick,Pixel Cube Atlas,.mat
+Assets/Game/Art/Brick/Model/Bricks.mesh,brick,Bricks,.mesh
+Assets/Game/Art/Brick/Model/Bush.mesh,brick,Bush,.mesh
+Assets/Game/Art/Brick/Model/Grey Stone.mesh,brick,Grey Stone,.mesh
+Assets/Game/Art/Brick/Model/Ground Brown.mesh,brick,Ground Brown,.mesh
+Assets/Game/Art/Brick/Model/Ground Green.mesh,brick,Ground Green,.mesh
+Assets/Game/Art/Brick/Model/Sand.mesh,brick,Sand,.mesh
+Assets/Game/Art/Brick/Model/Water.mesh,brick,Water,.mesh
+Assets/Game/Art/Brick/Prefab/Bricks.prefab,brick,Bricks,.prefab
+Assets/Game/Art/Brick/Prefab/Bush.prefab,brick,Bush,.prefab
+Assets/Game/Art/Brick/Prefab/Grey Stone.prefab,brick,Grey Stone,.prefab
+Assets/Game/Art/Brick/Prefab/Ground Brown.prefab,brick,Ground Brown,.prefab
+Assets/Game/Art/Brick/Prefab/Ground Green.prefab,brick,Ground Green,.prefab
+Assets/Game/Art/Brick/Prefab/Sand.prefab,brick,Sand,.prefab
+Assets/Game/Art/Brick/Prefab/Water.prefab,brick,Water,.prefab
+Assets/Game/Art/Brick/Textures/Pixel Cube Atlas.png,brick,Pixel Cube Atlas,.png

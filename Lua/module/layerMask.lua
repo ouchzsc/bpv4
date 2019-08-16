@@ -3,13 +3,13 @@ local layerMask = {}
 local player, bullet, brick, trigger = 0, 1, 2, 3
 
 local function getLayerTag(layer)
-    return bit.lshift(1, layer)
+    return 1 << layer
 end
 
 local function bitOrLayer(...)
     local c = 0
     for k, v in pairs({ ... }) do
-        c = bit.bor(getLayerTag(v), c)
+        c = getLayerTag(v) | c
     end
     return c
 end
@@ -35,7 +35,7 @@ end
 
 function layerMask.collideWith(a, b)
     a, b = a or layerMask.brick, b or layerMask.brick
-    return bit.band(a.tag, b.col) ~= 0
+    return a.tag & b.col ~= 0
 end
 
 function layerMask.getLayer(name)

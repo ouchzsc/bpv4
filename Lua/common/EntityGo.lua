@@ -17,7 +17,7 @@ end
 function EntityGo:hide()
     if self.isEnable then
         self.isEnable = false
-        self:hideChildren()
+        self:beforeOnDisalbe()
         self:onDisable()
         self:unRegAllEvent()
         self:unScheduleAllTimer()

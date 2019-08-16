@@ -7,10 +7,12 @@ function module.init()
     module.input = require("module.input")
     module.event = require("module.event")
     module.world = require("module.world")
+    module.layerMask = require("module.layerMask")
 
     module.event.init()
     module.input.init()
     module.cacheMgr.init()
+    module.layerMask.init()
 
     -----------------
     --module.cfgMgr = require("Config.cfgMgr")

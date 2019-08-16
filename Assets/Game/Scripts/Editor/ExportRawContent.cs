@@ -136,8 +136,11 @@ public class Tools
     private static void ExtractAvatar(string modelFolder, string fbxPath)
     {
         Avatar avt = AssetDatabase.LoadAssetAtPath<Avatar>(fbxPath);
-        string newPath = Path.Combine(modelFolder, Path.ChangeExtension(avt.name, ".asset"));
-        ExtractFromAsset(avt, newPath);
+        if (avt != null)
+        {
+            string newPath = Path.Combine(modelFolder, Path.ChangeExtension(avt.name, ".asset"));
+            ExtractFromAsset(avt, newPath);
+        }
     }
 
     public static void ExtractFromAsset(Object subAsset, string destinationPath)

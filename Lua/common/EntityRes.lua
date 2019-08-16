@@ -73,7 +73,7 @@ function EntityRes:hide()
     if self.resObj then
         if self.isEnable then
             self.isEnable = false
-            self:hideChildren()
+            self:beforeOnDisalbe()
             self:onDisable()
             self:unRegAllEvent()
             self:unScheduleAllTimer()

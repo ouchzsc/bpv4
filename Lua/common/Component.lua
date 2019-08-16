@@ -25,7 +25,6 @@ end
 function Component:hide()
     if self.isEnable then
         self.isEnable = false
-        self:hideChildren()
         self:onDisable()
         self:unRegAllEvent()
         self:unScheduleAllTimer()

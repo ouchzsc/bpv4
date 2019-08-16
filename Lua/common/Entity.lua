@@ -102,17 +102,22 @@ function Entity:addEntityGo(EntityCls, gameObject)
 end
 
 function Entity:addComponent(BeComClass)
-    self.children = self.children or {}
+    self.components = self.components or Stream:New()
     local com = BeComClass:new({ entity = self })
     com.isEnable = false
-    self.children[com] = true
+    self.components:Add(com)
     return com
 end
 
-function Entity:hideChildren()
+function Entity:beforeOnDisalbe()
     self.children = self.children or {}
     for child, _ in pairs(self.children) do
         child:hide()
+    end
+    if self.components ~= nil then
+        self.components:ForEach(function(com, id)
+            com:hide()
+        end)
     end
 end
 
@@ -124,6 +129,17 @@ function Entity:removeChildren()
         child.gameObject = nil
     end
     self.children = {}
+end
+
+function Entity:popEvent(eventtype, data)
+    if self.components == nil then
+        return
+    end
+    self.components:ForEach(function(com, id)
+        if com.isEnable and com.onPopEvent then
+            com:onPopEvent(eventtype, data)
+        end
+    end)
 end
 
 return Entity

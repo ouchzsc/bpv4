@@ -1,7 +1,7 @@
 local event = {}
 function event.init()
     event.onCmdUpdate = SimpleEvent:New("onCmdUpdate")
-    event.onPhysicsUpdate = SimpleEvent:New("onPhysicsUpdate")
+    event.onFixedUpdate = SimpleEvent:New("onFixedUpdate")
     event.onAccSystemUpdate = SimpleEvent:New("onAccSystemUpdate")
     event.onLateUpdate = SimpleEvent:New("onLateUpdate")
     event.onAfterLateUpdate = SimpleEvent:New("onAfterLateUpdate")
