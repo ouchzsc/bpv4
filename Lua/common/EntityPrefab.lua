@@ -33,7 +33,7 @@ function EntityPrefab:onResDisable()
     self.resObj:SetActive(false)
 end
 
-function EntityPrefab:onResDestroy()
+function EntityPrefab:afterOnDestroy()
     if self.resObj then
         GameObject.Destroy(self.resObj)
     end

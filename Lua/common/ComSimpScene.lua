@@ -20,7 +20,7 @@ function ComSimpScene:getCache()
     return module.cacheMgr.sceneCache
 end
 
-function ComSimpScene:onResDestroy()
+function ComSimpScene:afterOnDestroy()
     SceneManager.UnloadSceneAsync(self.resObj)
 end
 

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -24,9 +26,18 @@ namespace Res
 #if UNITY_EDITOR
             if (AbMgr.instance.loadInEditor)
             {
-                object obj = AssetDatabase.LoadAssetAtPath<Object>(_assetInfo.assetPath);
-                loadDone(obj);
-                return;
+                if (_assetInfo.type.Equals(".unity"))
+                {
+                    EditorSceneManager.LoadSceneInPlayMode(_assetInfo.assetPath, new LoadSceneParameters(LoadSceneMode.Additive));
+                    loadDone(_assetInfo.assetName);
+                    return;
+                }
+                else
+                {
+                    object obj = AssetDatabase.LoadAssetAtPath<Object>(_assetInfo.assetPath);
+                    loadDone(obj);
+                    return;
+                }
             }
 #endif
             if (AssetLoaderPool.TryGetValue(_assetInfo, out var assetLoader))

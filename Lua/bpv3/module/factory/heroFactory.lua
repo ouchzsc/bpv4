@@ -3,11 +3,13 @@ local heroFactory = {}
 function heroFactory.create()
     local entity = Entity:new()
     entity:addComponent(GameObject)
+
     entity:addComponent(PlayerCmd)
     entity:addComponent(PhysicsMove)
     entity:addComponent(Gravity)
     entity:addComponent(AccSystem)
     entity:addComponent(RecoverJumpForceByLand)
+
     entity:addComponent(RenderHitting)
     entity:addComponent(HitBack)
     entity:addComponent(Animator)

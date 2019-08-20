@@ -4,7 +4,7 @@ local Time = CS.UnityEngine.Time
 
 function main.start()
     module.init()
-    module.world.start()
+    module.boot.start()
 end
 
 function main.update()

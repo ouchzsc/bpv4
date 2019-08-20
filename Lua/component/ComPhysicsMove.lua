@@ -5,13 +5,13 @@ local Component = require("common.Component")
 local module = require("module.module")
 
 local PhysicsMove = Component:extends()
-local ax, ay = 300, 10000
+local ax, ay = 3, 100
 local maxJumpEnergy, defaulMaxJumpTime = 0.1, 1
 local checkY = 1
-local littlehelp = 300
-local umbrellaInitFallSpeed = 100
+local littlehelp = 3
+local umbrellaInitFallSpeed = 1
 local defaultFriction = 10
-local jumpXSpeed = 100
+local jumpXSpeed = 1
 
 function PhysicsMove:onEnable()
     self:reg(module.event.onFixedUpdate, function(dt)

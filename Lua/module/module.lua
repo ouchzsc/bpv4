@@ -6,8 +6,9 @@ function module.init()
     module.cacheMgr = require("module.cacheMgr")
     module.input = require("module.input")
     module.event = require("module.event")
-    module.world = require("module.world")
+    module.boot = require("module.boot")
     module.layerMask = require("module.layerMask")
+
 
     module.event.init()
     module.input.init()

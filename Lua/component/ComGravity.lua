@@ -11,7 +11,7 @@ end
 function Gravity:onFixedUpdate(dt)
     local entity = self.entity
     entity.ayMap = entity.ayMap or {}
-    entity.ayMap.gravityY = -5
+    entity.ayMap.gravityY = -10
 end
 
 function Gravity:onDisable()

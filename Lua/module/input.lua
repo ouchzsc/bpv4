@@ -7,6 +7,8 @@ local input = {}
 
 input.axisX = 0
 input.axisY = 0
+input.mouseX = 0
+input.mouseY = 0
 
 function input.init()
     module.event.onUpdate:Register(input.update)
@@ -15,6 +17,9 @@ end
 function input.update()
     input.axisX = Input.GetAxis("Horizontal")
     input.axisY = Input.GetAxis("Vertical")
+    local mousePos = Input.mousePosition
+    input.mouseX = mousePos.x
+    input.mouseY = mousePos.y
 
     if Input.GetKeyDown(KeyCode.F6) then
         package.loaded[testFile] = nil

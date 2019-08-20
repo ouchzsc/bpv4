@@ -38,3 +38,5 @@ Assets/Game/Art/Brick/Prefab/Ground Green.prefab,brick,Ground Green,.prefab
 Assets/Game/Art/Brick/Prefab/Sand.prefab,brick,Sand,.prefab
 Assets/Game/Art/Brick/Prefab/Water.prefab,brick,Water,.prefab
 Assets/Game/Art/Brick/Textures/Pixel Cube Atlas.png,brick,Pixel Cube Atlas,.png
+Assets/Game/Scenes/s1.unity,s1,s1,.unity
+Assets/Game/UIRes/Start/PanelStart.prefab,ui/panelstart,PanelStart,.prefab

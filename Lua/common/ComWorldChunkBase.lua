@@ -34,7 +34,7 @@ function ComWorldChunkBase:onResDisable()
     end
 end
 
-function ComWorldChunkBase:onResDestroy()
+function ComWorldChunkBase:afterOnDestroy()
     local rootGos = self.resObj:GetRootGameObjects()
     for i = 0, rootGos.Length - 1 do
         rootGos[i]:SetActive(false)

@@ -64,7 +64,7 @@ function EntityRes:onCacheOut()
     if self.awaken then
         self:onDestroy()
     end
-    self:onResDestroy()
+    self:afterOnDestroy()
     self.resObj = nil
 end
 
@@ -99,7 +99,7 @@ end
 function EntityRes:onResDisable()
 end
 
-function EntityRes:onResDestroy()
+function EntityRes:afterOnDestroy()
 end
 
 

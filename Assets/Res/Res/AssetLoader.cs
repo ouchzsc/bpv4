@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Res
 {
@@ -95,14 +96,23 @@ namespace Res
             BundleLoaderPool.TryGetValue(bundleName, out var bundleLoader);
             if (bundleLoader != null)
             {
-                var assetReq = bundleLoader.assetBundle.LoadAssetAsync(assetName);
-                yield return assetReq;
-                loadDone(assetReq.asset);
+                if (bundleLoader.assetBundle.isStreamedSceneAssetBundle)
+                {
+                    var async = SceneManager.LoadSceneAsync(assetName, LoadSceneMode.Additive);
+                    while (!async.isDone)
+                        yield return null;
+                    loadDone(assetName);
+                }
+                else
+                {
+                    var assetReq = bundleLoader.assetBundle.LoadAssetAsync(assetName);
+                    yield return assetReq;
+                    loadDone(assetReq.asset);
+                }                
             }
             else
             {
                 Debug.LogError($"load asset {assetName} failed");
-
                 loadDone(null);
             }
         }

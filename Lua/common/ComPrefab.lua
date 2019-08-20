@@ -33,7 +33,7 @@ function ComPrefab:onResDisable()
     self.resObj:SetActive(false)
 end
 
-function ComPrefab:onResDestroy()
+function ComPrefab:afterOnDestroy()
     if self.resObj then
         GameObject.Destroy(self.resObj)
     end
