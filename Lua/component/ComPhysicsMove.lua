@@ -16,7 +16,7 @@ local jumpXSpeed = 1
 function PhysicsMove:onEnable()
     self:reg(module.event.onFixedUpdate, function(dt)
         local entity = self.entity
-        local _, _, cols, len =module.world.bumpWorld:check(entity, entity.x, entity.y + checkY, module.layerMask.filter)
+        local _, _, cols, len =module.bumpWorld.world:check(entity, entity.x, entity.y + checkY, module.layerMask.filter)
         entity.isGrounded = false
         local groundCol = nil
         for i = 1, len do

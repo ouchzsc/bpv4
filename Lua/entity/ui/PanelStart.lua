@@ -1,6 +1,6 @@
 local EntityPrefab = require("common.EntityPrefab")
 local module = require("module.module")
-local EntityScene1 = require("entity.EntityScene1")
+local EntityScene1 = require("entity.scene.EntityScene1")
 local cfg = require "cfg._cfgs"
 
 local PanelStart = EntityPrefab:extends()

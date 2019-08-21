@@ -1,14 +1,14 @@
 local module = {}
 
 function module.init()
-    module.logger= require("module.logger")
+    module.logger = require("module.logger")
     module.assetMgr = require("module.assetMgr")
     module.cacheMgr = require("module.cacheMgr")
     module.input = require("module.input")
     module.event = require("module.event")
     module.boot = require("module.boot")
     module.layerMask = require("module.layerMask")
-
+    module.bumpWorld = require("module.bumpWorld")
 
     module.event.init()
     module.input.init()

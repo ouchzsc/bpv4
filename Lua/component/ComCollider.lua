@@ -4,7 +4,7 @@ local module = require("module.module")
 local ComCollider = Component:extends()
 
 function ComCollider:onEnable()
-    local world = module.world.bumpWorld
+    local world = module.bumpWorld.world
     local entity = self.entity
     entity.x = entity.x or 0
     entity.y = entity.y or 0
@@ -25,7 +25,7 @@ function ComCollider:onEnable()
 end
 
 function ComCollider:onFixedUpdate()
-    local world = module.world.bumpWorld
+    local world = module.bumpWorld.world
     if not self.createSuccess then
         local filter = function(other)
             return module.layerMask.collideWith(self.oldLayerMask, other.layerMask)
@@ -41,7 +41,7 @@ function ComCollider:onFixedUpdate()
 end
 
 function ComCollider:onLateUpdate()
-    local world = module.world.bumpWorld
+    local world = module.bumpWorld.world
     local entity = self.entity
     utils.assertType('number', entity.x, entity.name .. ' x')
     utils.assertType('number', entity.x, entity.name .. ' x')
@@ -76,7 +76,7 @@ function ComCollider:onLateUpdate()
 end
 
 function ComCollider:onDisable()
-    local world = module.world.bumpWorld
+    local world = module.bumpWorld.world
     local entity = self.entity
     world:remove(entity)
 end

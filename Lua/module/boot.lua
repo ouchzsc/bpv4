@@ -1,9 +1,9 @@
 local boot = {}
 local EntityPlayer = require("entity.EntityPlayer")
 local EntityBrick = require("entity.EntityBrick")
+local bump = require("common.bump")
 local PanelStart = require("entity.ui.PanelStart")
 local cfg = require "cfg._cfgs"
-local bump = require("common.bump")
 local GameObject = CS.UnityEngine.GameObject
 
 function boot.start()
