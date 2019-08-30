@@ -9,11 +9,14 @@ function module.init()
     module.boot = require("module.boot")
     module.layerMask = require("module.layerMask")
     module.bumpWorld = require("module.bumpWorld")
+    module.playerMgr = require("module.playerMgr")
+    module.uiMgr = require("module.uiMgr")
 
     module.event.init()
     module.input.init()
     module.cacheMgr.init()
     module.layerMask.init()
+    module.uiMgr.init()
 
     -----------------
     --module.cfgMgr = require("Config.cfgMgr")

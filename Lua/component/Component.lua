@@ -1,4 +1,4 @@
-local Entity = require("common.Entity")
+local Entity = require("entity.Entity")
 local module = require("module.module")
 local Component = Entity:extends() --这里偷懒了，想让Component和Entity一样强大，继承了Entity的方法。
 

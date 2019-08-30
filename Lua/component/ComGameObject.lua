@@ -1,4 +1,4 @@
-local Component = require("common.Component")
+local Component = require("component.Component")
 local ComGameObject = Component:extends()
 local Vector3 = CS.UnityEngine.Vector3
 local module = require("module.module")

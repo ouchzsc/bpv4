@@ -8,11 +8,11 @@ function main.start()
 end
 
 function main.update()
-    module.event.onUpdate:trigger()
+    module.event.onUpdate:trigger(Time.deltaTime)
 end
 
 function main.fixedUpdate()
-    module.event.onFixedUpdate:trigger()
+    module.event.onFixedUpdate:trigger(Time.deltaTime)
 end
 function main.lateUpdate()
     module.event.onLateUpdate:trigger(Time.deltaTime)

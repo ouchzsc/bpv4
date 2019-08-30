@@ -1,4 +1,4 @@
-local Component = require("common.Component")
+local Component = require("component.Component")
 local utils = require("common.utils")
 local module = require("module.module")
 local ComCollider = Component:extends()

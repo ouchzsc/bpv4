@@ -48,6 +48,7 @@ mk("Assets/Game/Art/Brick/Prefab/Sand.prefab", "brick", "Sand", ".prefab")
 mk("Assets/Game/Art/Brick/Prefab/Water.prefab", "brick", "Water", ".prefab")
 mk("Assets/Game/Art/Brick/Textures/Pixel Cube Atlas.png", "brick", "Pixel Cube Atlas", ".png")
 mk("Assets/Game/Scenes/s1.unity", "s1", "s1", ".unity")
+mk("Assets/Game/UIRes/Info/PanelHeroInfo.prefab", "ui/panelheroinfo", "PanelHeroInfo", ".prefab")
 mk("Assets/Game/UIRes/Start/PanelStart.prefab", "ui/panelstart", "PanelStart", ".prefab")
 
 return this
