@@ -1,16 +1,15 @@
-local EntityScene = require("common.EntityScene")
+local EntityScene = require("entity.scene.EntityScene")
 local EntityScene1 = EntityScene:extends()
 local module = require("module.module")
 local cfg = require "cfg._cfgs"
-local EntityPlayer = require("entity.EntityPlayer")
-local EntityBrick = require("entity.EntityBrick")
+local EntityPlayer = require("entity.player.EntityPlayer")
+local EntityBrick = require("entity.obj.EntityBrick")
 local bump = require("common.bump")
 
 function EntityScene1:onAwake()
     module.bumpWorld.create()
-    local hero = EntityPlayer:new({ assetInfo = cfg.npc.npc.get(1).RefAsset })
-    hero:show()
-
+    module.playerMgr.createPlayer()
+    module.uiMgr.panelHeroInfo:show()
     local brick = EntityBrick:new({ assetInfo = cfg.npc.npc.get(2).RefAsset })
     brick:setData({ x = 0, y = -5 })
     brick:show()

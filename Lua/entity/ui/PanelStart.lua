@@ -1,4 +1,4 @@
-local EntityPrefab = require("common.EntityPrefab")
+local EntityPrefab = require("entity.EntityPrefab")
 local module = require("module.module")
 local EntityScene1 = require("entity.scene.EntityScene1")
 local cfg = require "cfg._cfgs"
@@ -17,6 +17,7 @@ function PanelStart:OnButton_Start()
     module.boot.curScene = EntityScene1:new({ assetInfo = cfg.asset.assets.get("Assets/Game/Scenes/s1.unity") })
     module.boot.curScene:show()
     self:hide()
+    --module.uiMgr.panelHeroInfo:show()
 end
 
 return PanelStart

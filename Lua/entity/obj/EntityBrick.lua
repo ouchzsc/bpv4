@@ -1,4 +1,4 @@
-local EntityPrefab = require("common.EntityPrefab")
+local EntityPrefab = require("entity.EntityPrefab")
 local ComGameObject = require("component.ComGameObject")
 local ComCollider = require("component.ComCollider")
 local EntityBrick = EntityPrefab:extends()
