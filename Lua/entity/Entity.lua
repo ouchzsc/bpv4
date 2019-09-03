@@ -146,9 +146,9 @@ function Entity:hideChildren()
         end
     end
     if self.components then
-        for com, _ in pairs(self.components) do
+        self.components:ForEach(function(com)
             com:hide()
-        end
+        end)
     end
 end
 
@@ -167,11 +167,10 @@ function Entity:removeChildren()
         self.entityGos = nil
     end
     if self.components then
-        for com, _ in pairs(self.components) do
-            --component没有子，不需要调用removeChildren
+        self.components:ForEach(function(com)
             com:onDestroy()
             com.entity = nil
-        end
+        end)
         self.components = nil
     end
 
