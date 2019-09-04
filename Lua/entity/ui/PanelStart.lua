@@ -14,10 +14,8 @@ function PanelStart:onAwake()
 end
 
 function PanelStart:OnButton_Start()
-    module.boot.curScene = EntityScene1:new({ assetInfo = cfg.asset.assets.get("Assets/Game/Scenes/s1.unity") })
-    module.boot.curScene:show()
+    module.scene.enterScene()
     self:hide()
-    --module.uiMgr.panelHeroInfo:show()
 end
 
 return PanelStart

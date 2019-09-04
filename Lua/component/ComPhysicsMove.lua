@@ -7,10 +7,10 @@ local module = require("module.module")
 local PhysicsMove = Component:extends()
 local ax, ay = 3, 100
 local maxJumpEnergy, defaulMaxJumpTime = 0.1, 1
-local checkY = 1
+local checkY = -0.01
 local littlehelp = 3
 local umbrellaInitFallSpeed = 1
-local defaultFriction = 10
+local defaultFriction = 0.1
 local jumpXSpeed = 1
 
 function PhysicsMove:onEnable()
@@ -24,7 +24,7 @@ function PhysicsMove:onFixedUpdate(dt)
     local groundCol = nil
     for i = 1, len do
         local col = cols[i]
-        if col.type == "slide" and col.normal.y ~= 0 and entity.y < col.other.y then
+        if col.type == "slide" and col.normal.y ~= 0 and entity.y > col.other.y then
             entity.isGrounded = true
             groundCol = col
             break

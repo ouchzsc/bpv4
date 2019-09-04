@@ -10,16 +10,21 @@ function EntityScene1:onAwake()
     module.bumpWorld.create()
     module.playerMgr.createPlayer()
     module.uiMgr.panelHeroInfo:show()
+
     local brick = EntityBrick:new({ assetInfo = cfg.npc.npc.get(2).RefAsset })
-    brick:setData({ x = 0, y = -5 })
+    brick:setData({ x = 0, y = 0 })
     brick:show()
+    --local brick = EntityBrick:new({ assetInfo = cfg.npc.npc.get(2).RefAsset })
+    --brick:setData({ x = -1, y = -1 })
+    --brick:show()
+    --local brick = EntityBrick:new({ assetInfo = cfg.npc.npc.get(2).RefAsset })
+    --brick:setData({ x = 1, y = -1 })
+    --brick:show()
 end
 
 function EntityScene1:onEnable()
     print("EntityScene1:onEnable()")
     --module.world.curScene:hide()
 end
-
-
 
 return EntityScene1

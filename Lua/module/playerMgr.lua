@@ -11,6 +11,7 @@ function playerMgr.createPlayer()
         --    assetInfo = module.cfgMgr.assets.get("Assets/Game/Content/Prefab/Knight/ToonRTS_demo_Knight.prefab"),
         --    parentTransform = module.boot.worldRoot.transform, })
         local hero = EntityPlayer:new({ assetInfo = cfg.npc.npc.get(1).RefAsset })
+        hero:setData({ w = 1, h = 2 })
         hero:show()
         playerMgr.player = hero
     end

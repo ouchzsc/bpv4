@@ -7,12 +7,10 @@ local module = require("module.module")
 function EntityBrick:onAwake()
     self.comGo = self:addComponent(ComGameObject)
     self.comCol = self:addComponent(ComCollider)
-    self:setData({
-        name = 'brick',
-        layerMask = module.layerMask.brick,
-        w = 1,
-        h = 1
-    })
+    self.name = 'brick'
+    self.layerMask = module.layerMask.brick
+    self.w = 1
+    self.h = 1
 end
 
 function EntityBrick:onShow()
