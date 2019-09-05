@@ -5,8 +5,8 @@ local Component = require("component.Component")
 local module = require("module.module")
 
 local PhysicsMove = Component:extends()
-local ax, ay = 3, 100
-local maxJumpEnergy, defaulMaxJumpTime = 0.1, 1
+local ax, ay = 300, 100
+local maxJumpEnergy, defaulMaxJumpTime = 0.2, 1
 local checkY = -0.01
 local littlehelp = 3
 local umbrellaInitFallSpeed = 1
@@ -42,7 +42,7 @@ function PhysicsMove:onFixedUpdate(dt)
 
     if not entity.isGrounded then
         -- 在空中
-        if y < 0 then
+        if y > 0 then
             --向上
             if not entity.released then
                 -- 之前没松手
@@ -51,7 +51,7 @@ function PhysicsMove:onFixedUpdate(dt)
                     entity.released = false
                     entity.jumpEnergy = entity.jumpEnergy - dt
                     entity.jumpTime = entity.jumpTime
-                    entity.ayMap.axis1 = -ay
+                    entity.ayMap.axis1 = ay
                     entity.vy = entity.vy or 0
                 else
                     --没有能量
@@ -75,7 +75,7 @@ function PhysicsMove:onFixedUpdate(dt)
                     entity.jumpEnergy = maxJumpEnergy
                     entity.jumpTime = entity.jumpTime - 1
                     entity.released = false
-                    entity.ayMap.axis1 = -ay
+                    entity.ayMap.axis1 = ay
                     entity.vy = 0
                     if x ~= 0 then
                         entity.vx = jumpXSpeed * x
@@ -108,12 +108,12 @@ function PhysicsMove:onFixedUpdate(dt)
             entity.jumpEnergy = 0
             entity.jumpTime = entity.jumpTime
             entity.released = true
-            entity.ayMap.axis1 = ay
+            entity.ayMap.axis1 = -ay
             entity.vy = entity.vy
         end
     else
         -- 在地上
-        if y < 0 then
+        if y > 0 then
             --按上
             if entity.released then
                 --之前松手了
@@ -121,7 +121,7 @@ function PhysicsMove:onFixedUpdate(dt)
                     entity.jumpTime = entity.jumpTime - 1
                     entity.jumpEnergy = maxJumpEnergy
                     entity.released = false
-                    entity.ayMap.axis1 = -ay
+                    entity.ayMap.axis1 = ay
                     entity.vy = 0
                     if x ~= 0 then
                         entity.vx = jumpXSpeed * x
@@ -139,7 +139,7 @@ function PhysicsMove:onFixedUpdate(dt)
                     entity.jumpTime = entity.jumpTime
                     entity.jumpEnergy = entity.jumpEnergy - dt
                     entity.released = false
-                    entity.ayMap.axis1 = -ay
+                    entity.ayMap.axis1 = ay
                     entity.vy = entity.vy
                 else
                     entity.jumpTime = entity.jumpTime

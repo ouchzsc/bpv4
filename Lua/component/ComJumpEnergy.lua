@@ -1,14 +1,16 @@
-local RecoverJumpForceByLand = Component:extends()
-local defaultJumpEnergyMax = 10
+local Component = require("component.Component")
+local JumpEnergy = Component:extends()
+local defaultJumpEnergyMax = 0.3
+local module = require("module.module")
 
-function RecoverJumpForceByLand:onPopEvent(type, data)
+function JumpEnergy:onPopEvent(type, data)
     local entity = self.entity
     entity.jumpEnergyMax = entity.jumpEnergyMax or defaultJumpEnergyMax
     entity.jumpEnergy = entity.jumpEnergy or entity.jumpEnergyMax
     if type == "onCollision" then
         local col = data.col
-        if col.normal.y ~= 0 and entity.y < data.other.y then
-            if not love.keyboard.isDown("w") then
+        if col.normal.y ~= 0 and entity.y > data.other.y then
+            if module.input.axisY <= 0 then
                 if entity.jumpEnergy < entity.jumpEnergyMax then
                     entity.jumpEnergy = entity.jumpEnergyMax
                 end
@@ -17,4 +19,4 @@ function RecoverJumpForceByLand:onPopEvent(type, data)
     end
 end
 
-return RecoverJumpForceByLand
+return JumpEnergy
