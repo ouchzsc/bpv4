@@ -5,12 +5,12 @@ local Component = require("component.Component")
 local module = require("module.module")
 
 local PhysicsMove = Component:extends()
-local ax, ay = 300, 100
+local ax, ay = 300, 300
 local maxJumpEnergy, defaulMaxJumpTime = 0.2, 2
 local checkY = -0.01
 local littlehelp = 3
 local umbrellaInitFallSpeed = 1
-local defaultFriction = 0.1
+local defaultFriction = 1.5
 local jumpXSpeed = 1
 
 function PhysicsMove:onEnable()
@@ -168,9 +168,9 @@ function PhysicsMove:onFixedUpdate(dt)
         local otherFriction = groundCol.other.friction or defaultFriction
         local entityFriction = entity.friction or defaultFriction
         local friction = otherFriction * entityFriction
-        if vx > 1 then
+        if vx > 0.1 then
             entity.axMap.fraction = math.min(entity.axMap.fraction, -friction)
-        elseif vx < -1 then
+        elseif vx < -0.1 then
             entity.axMap.fraction = math.max(entity.axMap.fraction, friction)
         else
             entity.axMap.fraction = 0
