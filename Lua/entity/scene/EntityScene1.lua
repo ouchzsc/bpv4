@@ -11,9 +11,17 @@ function EntityScene1:onAwake()
     module.playerMgr.createPlayer()
     module.uiMgr.panelHeroInfo:show()
 
-    local brick = EntityBrick:new({ assetInfo = cfg.npc.npc.get(2).RefAsset })
-    brick:setData({ x = 0, y = 0 })
-    brick:show()
+    for y, row in pairs(cfg.map.map1.all) do
+        for x, v in ipairs(row.cList) do
+            if v == 1 then
+                local brick = EntityBrick:new({ assetInfo = cfg.npc.npc.get(2).RefAsset })
+                brick:setData({ x = x, y = y })
+                brick:show()
+            end
+        end
+    end
+
+
     --local brick = EntityBrick:new({ assetInfo = cfg.npc.npc.get(2).RefAsset })
     --brick:setData({ x = -1, y = -1 })
     --brick:show()

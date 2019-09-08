@@ -18,7 +18,7 @@ function EntityPlayer:onAwake()
     self.acc = self:addComponent(ComAccSystem)
     self.playerCmd = self:addComponent(ComPlayerCmd)
     self.comJumpEnergy = self:addComponent(ComJumpEnergy)
-    self:setData({ x = 0, y = 5, name = "player", speedPer = 1, speedBase = 1, w = 1, h = 2 })
+    self:setData({ x = 2, y = 7, name = "player", speedPer = 1, speedBase = 1, w = 1, h = 2 })
 end
 
 function EntityPlayer:onShow()

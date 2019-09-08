@@ -6,7 +6,7 @@ local module = require("module.module")
 
 local PhysicsMove = Component:extends()
 local ax, ay = 300, 100
-local maxJumpEnergy, defaulMaxJumpTime = 0.2, 1
+local maxJumpEnergy, defaulMaxJumpTime = 0.2, 2
 local checkY = -0.01
 local littlehelp = 3
 local umbrellaInitFallSpeed = 1
@@ -48,22 +48,22 @@ function PhysicsMove:onFixedUpdate(dt)
                 -- 之前没松手
                 if entity.jumpEnergy > 0 then
                     --还有能量
-                    entity.released = false
+                    --entity.released = false
                     entity.jumpEnergy = entity.jumpEnergy - dt
-                    entity.jumpTime = entity.jumpTime
+                    --entity.jumpTime = entity.jumpTime
                     entity.ayMap.axis1 = ay
-                    entity.vy = entity.vy or 0
+                    --entity.vy = entity.vy or 0
                 else
                     --没有能量
-                    entity.released = false
+                    --entity.released = false
                     entity.jumpEnergy = 0
-                    entity.jumpTime = entity.jumpTime
+                    --entity.jumpTime = entity.jumpTime
                     entity.vy = entity.vy or 0
-                    if entity.vy > 0 then
-                        if entity.vy > umbrellaInitFallSpeed then
-                            entity.vy = umbrellaInitFallSpeed
+                    if entity.vy < 0 then
+                        if entity.vy < -umbrellaInitFallSpeed then
+                            entity.vy = -umbrellaInitFallSpeed
                         end
-                        entity.ayMap.axis1 = -littlehelp
+                        entity.ayMap.axis1 = littlehelp
                     else
                         entity.ayMap.axis1 = 0
                     end
@@ -86,11 +86,11 @@ function PhysicsMove:onFixedUpdate(dt)
                     entity.jumpTime = 0
                     entity.released = false
                     entity.vy = entity.vy
-                    if entity.vy > 0 then
-                        if entity.vy > umbrellaInitFallSpeed then
-                            entity.vy = umbrellaInitFallSpeed
+                    if entity.vy < 0 then
+                        if entity.vy < -umbrellaInitFallSpeed then
+                            entity.vy = -umbrellaInitFallSpeed
                         end
-                        entity.ayMap.axis1 = -littlehelp
+                        entity.ayMap.axis1 = littlehelp
                     else
                         entity.ayMap.axis1 = 0
                     end

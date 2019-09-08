@@ -6,6 +6,10 @@
         <column desc="asset" name="asset" type="string"/>
         <column desc="type" name="type" type="string"/>
     </table>
+    <table name="map.map1" own="client" primaryKey="row">
+        <column desc="row" name="row" type="int"/>
+        <column desc="columnList" name="cList" type="list,int,15"/>
+    </table>
     <table name="npc.npc" own="client" primaryKey="id">
         <column desc="#id" name="id" type="int"/>
         <column desc="asset" name="asset" ref="asset.assets" type="string"/>
