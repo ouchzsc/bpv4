@@ -10,7 +10,7 @@ local defaultJumpEnergyMax, defaulMaxJumpTime = 0.1, 2
 local checkY = -0.01
 local littlehelp = 3
 local umbrellaInitFallSpeed = 1
-local defaultFriction = 1.5
+local defaultFriction = 10
 local jumpXSpeed = 1
 
 function PhysicsMove:onEnable()

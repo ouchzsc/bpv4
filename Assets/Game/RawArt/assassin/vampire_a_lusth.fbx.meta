@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Avatar
+      assembly: UnityEngine.AnimationModule
+      name: vampire_a_lusthAvatar
+    second: {fileID: 9000000, guid: 5fa145982ac16ff498b984ba7bc2d8a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vampire_MAT
+    second: {fileID: 2100000, guid: bf284173ccf5ccf43938961a8aead605, type: 2}
+  - first:
+      type: UnityEngine:Mesh
+      assembly: UnityEngine.CoreModule
+      name: Vampire
+    second: {fileID: 4300000, guid: 235eb65672c1759469917eb53829d651, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

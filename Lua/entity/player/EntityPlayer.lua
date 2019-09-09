@@ -6,6 +6,7 @@ local ComGravity = require("component.ComGravity")
 local ComPhysicsMove = require("component.ComPhysicsMove")
 local ComAccSystem = require("component.ComAccSystem")
 local ComPlayerCmd = require("component.ComPlayerCmd")
+local ComAnimator = require("component.ComAnimator")
 
 local EntityPlayer = EntityPrefab:extends()
 
@@ -16,7 +17,8 @@ function EntityPlayer:onAwake()
     self.phyMove = self:addComponent(ComPhysicsMove)
     self.acc = self:addComponent(ComAccSystem)
     self.playerCmd = self:addComponent(ComPlayerCmd)
-    self:setData({ x = 2, y = 7, name = "player", speedPer = 1, speedBase = 3, w = 1, h = 2 })
+    self.animator = self:addComponent(ComAnimator)
+    self:setData({ x = 2, y = 7, name = "player", speedPer = 1, speedBase = 10, w = 1, h = 2, vx = 0, vy = 0 })
 end
 
 function EntityPlayer:onShow()
@@ -26,6 +28,7 @@ function EntityPlayer:onShow()
     self.phyMove:show()
     self.acc:show()
     self.playerCmd:show()
+    self.animator:show()
 end
 
 return EntityPlayer
