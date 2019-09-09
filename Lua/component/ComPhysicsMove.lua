@@ -5,7 +5,7 @@ local Component = require("component.Component")
 local module = require("module.module")
 
 local PhysicsMove = Component:extends()
-local ax, ay = 300, 300
+local ax, ay = 300, 180
 local defaultJumpEnergyMax, defaulMaxJumpTime = 0.1, 2
 local checkY = -0.01
 local littlehelp = 3
