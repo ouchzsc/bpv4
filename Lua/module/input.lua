@@ -15,8 +15,8 @@ function input.init()
 end
 
 function input.update()
-    input.axisX = Input.GetAxis("Horizontal")
-    input.axisY = Input.GetAxis("Vertical")
+    input.axisX = Input.GetAxisRaw("Horizontal")
+    input.axisY = Input.GetAxisRaw("Vertical")
     local mousePos = Input.mousePosition
     input.mouseX = mousePos.x
     input.mouseY = mousePos.y
