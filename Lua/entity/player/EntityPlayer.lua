@@ -7,7 +7,7 @@ local ComPhysicsMove = require("component.ComPhysicsMove")
 local ComAccSystem = require("component.ComAccSystem")
 local ComPlayerCmd = require("component.ComPlayerCmd")
 local ComAnimator = require("component.ComAnimator")
-
+local module = require("module.module")
 local EntityPlayer = EntityPrefab:extends()
 
 function EntityPlayer:onAwake()
@@ -21,6 +21,10 @@ function EntityPlayer:onAwake()
     self:setData({ x = 2, y = 7, name = "player", speedPer = 1, speedBase = 10, w = 1, h = 2, vx = 0, vy = 0, dir = 1 })
 end
 
+function EntityPlayer:onEnable()
+    module.virtualCam.setTarget(self.gameObject.transform)
+end
+
 function EntityPlayer:onShow()
     self.go:show()
     self.col:show()
@@ -29,6 +33,10 @@ function EntityPlayer:onShow()
     self.acc:show()
     self.playerCmd:show()
     self.animator:show()
+end
+
+function EntityPlayer:onDisable()
+    module.virtualCam.clearTarget()
 end
 
 return EntityPlayer

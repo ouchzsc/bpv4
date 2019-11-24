@@ -33,7 +33,11 @@ function AccSystem:onAccSystemUpdate(dt)
     for k, v in pairs(entity.ayMap) do
         ay = ay + v
     end
-    entity.vy = entity.vy + ay * dt
+    if entity.isGrounded and ay<0 then
+        entity.vy = 0
+    else
+        entity.vy = entity.vy + ay * dt
+    end
 
     if entity.vx > maxVx then
         entity.vx = maxVx
